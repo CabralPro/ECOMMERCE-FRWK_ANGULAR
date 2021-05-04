@@ -1,0 +1,27 @@
+.card-product {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 20px 10px;
+	padding: 20px 10px;
+	width: 290px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	min-height: 300px;
+	box-shadow: 0 5px 10px #0000002b;
+	background-color: #fff;
+	transition: 0.3s;
+	&:hover {
+		transform: scale(1.03);
+	}
+	.image {
+		height: 150px;
+	}
+	a {
+		margin-top: auto;
+	}
+	@media (max-width: 350px) {
+		width: 270px;
+	}
+}

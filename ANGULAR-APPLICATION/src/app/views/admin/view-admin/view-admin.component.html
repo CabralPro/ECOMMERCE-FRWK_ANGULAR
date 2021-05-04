@@ -1,0 +1,16 @@
+<app-login-admin *ngIf="!adminService.isLoggedIn"></app-login-admin>
+
+<div *ngIf="adminService.isLoggedIn" class="content-admin">
+
+	<app-button click label="Logout" class="mb-4 ml-auto" (click)="adminService.signOut()"></app-button>
+
+	<app-table-products></app-table-products>
+
+	<app-modal [size]="'lg'">
+		<app-button click class="mx-auto" label="Cadastrar produto"></app-button>
+		<app-card content title="Cadastro de Produtos" subtitle="Preencha os dados cadastrais">
+			<app-product-form></app-product-form>
+		</app-card>
+	</app-modal>
+
+</div>

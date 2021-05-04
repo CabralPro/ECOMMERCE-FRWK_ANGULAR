@@ -1,0 +1,26 @@
+<app-card title="Carrinho de compras" subtitle="Veja abaixo os detalhes do seu carrinho">
+
+	<div class="shopping-cart">
+
+		<app-table [headers]="headers" [items]="shoppingCartItems">
+
+			<ng-template #customColumn let-item let-title="title">
+
+				<input *ngIf="title == 'Quantidade'" type="number" [(ngModel)]="item.amount" (ngModelChange)="checkStock(item)"
+					min="1">
+
+				<app-confirmation [callback]="removeProductShoppingCart(item.product.id)">
+					<i *ngIf="title == 'Opções'" class="material-icons mx-2 text-danger">delete_forever</i>
+				</app-confirmation>
+
+			</ng-template>
+
+		</app-table>
+
+		<app-confirmation *ngIf="shoppingCartItems.length" [callback]="checkout">
+			<app-button click class="mt-5 mx-auto" label="Finalizar compra"></app-button>
+		</app-confirmation>
+
+	</div>
+
+</app-card>

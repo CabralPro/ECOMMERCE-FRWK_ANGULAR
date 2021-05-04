@@ -1,0 +1,20 @@
+{
+  "Products": [
+    {
+      "id": "1",
+      "name": "Banana",
+      "description": "Descrição da banana",
+      "image": "https://carrefourbr.vtexassets.com/arquivos/ids/197486/59870_2.jpg?v=637272440099630000",
+      "stock": 10,
+      "price": 15.25
+    },
+    {
+      "id": "2",
+      "name": "Melancia",
+      "description": "Docinha docinha",
+      "image": "https://www.macsupermercados.com.br/wp-content/uploads/2019/03/mel%C3%A2ncia.jpg",
+      "stock": 15,
+      "price": 25.25
+    }
+  ]
+}

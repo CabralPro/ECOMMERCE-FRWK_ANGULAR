@@ -1,0 +1,20 @@
+<div class="details-product">
+
+	<div class="img">
+		<img [src]="productReceived.imagem" [alt]="productReceived.descricao" />
+	</div>
+
+	<h3>{{convertToReal(productReceived.valor)}}</h3>
+
+	<h5 class="label">QUANTIDADE :</h5>
+	<input class="amount" type="number" [(ngModel)]="amount" (ngModelChange)="checkStock()" min="1">
+
+	<h5 class="label">CUSTO TOTAL :</h5>
+	<h5>{{total}}</h5>
+
+	<h5 class="label">DESCRIÇÃO</h5>
+	<h5>{{productReceived.descricao}}</h5>
+
+	<app-button click class="mt-5 mx-auto" label="Continuar" (click)="goToShoppingCart()"></app-button>
+
+</div>

@@ -1,0 +1,9 @@
+.sidebar-wrapper .active a{
+ background-color: var(--primary);
+}
+
+.top-sidedar a{
+	border: 1px solid red;
+	display: flex;
+	flex-direction: column;
+}

@@ -1,0 +1,14 @@
+.confirmation {
+	.modal-full {
+		.modal-dialog {
+			max-width: 95vw;
+		}
+	}
+	.modal-footer {
+		justify-content: center;
+		border-top: none;
+	}
+	.modal-header {
+		border-bottom: none;
+	}
+}

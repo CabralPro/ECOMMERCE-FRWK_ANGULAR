@@ -1,0 +1,22 @@
+.details-product{
+	display: flex;
+	flex-direction: column;
+	.amount{
+		max-width: 80px;
+	}
+	.img{
+		max-width: 250px;
+		max-height: 250px;
+		margin: auto;
+	}
+	h3{
+		text-align: center;
+	}
+	.label{
+		font-weight: bold;
+		margin: 25px 0;
+	}
+	input{
+		max-width: 70px !important;
+	}
+}

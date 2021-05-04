@@ -1,0 +1,34 @@
+:root{
+  --primary: #003772 !important;
+}
+
+.msg-success{
+  background-color: var(--primary);
+}
+
+.msg-error{
+  background-color: var(--danger);
+}
+
+.msg-warning{
+  background-color: var(--warning);
+	color: black;
+}
+
+img, input{
+	max-width: 100% !important;
+	max-height: 100% !important;
+}
+
+.click{
+	cursor: pointer !important;
+}
+
+.click * {
+	cursor: pointer !important;
+}
+
+.cdk-overlay-container {
+	position: fixed;
+	z-index: 10000;
+}

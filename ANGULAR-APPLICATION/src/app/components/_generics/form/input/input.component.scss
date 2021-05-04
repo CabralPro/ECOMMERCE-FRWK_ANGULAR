@@ -1,0 +1,18 @@
+.form-group {
+	input{
+		box-shadow: none
+	}
+	.disabled {
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+	.disabledLabel {
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+	.msgError {
+		font-size: 10pt;
+		color: var(--danger);
+		margin: 5px 0 0 5px;
+	}
+}

@@ -1,0 +1,12 @@
+<div class="card-product">
+	<div class="image">
+		<img [src]="productReceived.imagem" alt />
+	</div>
+	<h3>{{productReceived.nome}}</h3>
+	<h5>{{convertToReal(productReceived.valor)}}</h5>
+
+	<app-modal [size]="'xl'" [title]="productReceived.nome">
+		<app-button click class="mt-5" label="Comprar"></app-button>
+		<app-details-buy-product content [productReceived]="productReceived"></app-details-buy-product>
+	</app-modal>
+</div>

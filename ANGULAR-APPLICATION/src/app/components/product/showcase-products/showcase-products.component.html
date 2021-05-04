@@ -1,0 +1,8 @@
+<app-overlay-loading 	[isLoading]="productsService.loading" >
+	<div class="showcase-products">
+		<app-card-showcase-product
+			*ngFor="let product of products"
+			[productReceived]="product"
+		></app-card-showcase-product>
+	</div>
+</app-overlay-loading>

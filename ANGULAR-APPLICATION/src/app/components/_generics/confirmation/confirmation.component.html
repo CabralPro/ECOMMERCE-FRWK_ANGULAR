@@ -1,0 +1,22 @@
+<div (click)="openModal(content)" class="click d-flex {{_class}}" [class.notClick]="disabled">
+	<ng-content></ng-content>
+</div>
+
+<ng-template #content let-modal>
+	<app-overlay-loading [isLoading]="loading">
+
+		<div class="d-flex flex-column">
+
+			<h2 class="modal-title m-auto text-center pt-3">{{title}}</h2>
+	
+			<div class="modal-footer d-flex ">
+				<app-button *ngIf="callback" label="Sim" _class="my-0" (click)="continue(modal)" [icon]="'feather:check-circle'">
+				</app-button>
+				<app-button label="Cancelar" _class="my-0 btn btn-danger" (click)="modal.close('Close click')"
+					[icon]="'feather:x-circle'"></app-button>
+				<ng-content select="[footer]"> </ng-content>
+			</div>
+		</div>
+
+	</app-overlay-loading>
+</ng-template>

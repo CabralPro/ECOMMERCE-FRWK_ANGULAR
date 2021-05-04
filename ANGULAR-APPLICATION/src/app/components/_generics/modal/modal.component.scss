@@ -1,0 +1,19 @@
+.modal-full{
+	.modal-dialog{
+		max-width: 95vw;
+	}
+}
+.iconCloseModal{
+	position: absolute;
+	right: 7px;
+	top: 7px;
+	color: #565656;
+	z-index: 999;
+}
+
+.click{
+	cursor: pointer !important;
+	*{
+		cursor: pointer !important;
+	}
+}

@@ -1,0 +1,97 @@
+<div 
+	class="form-group" 
+	[class.checkboxFormGroup]="inputCustom.type == InputType.checkbox"
+	[class.notClick]="inputCustom.disabled"
+>
+	
+	<ng-content></ng-content>
+
+	<div>
+		<label class="pt-0 mr-2" [for]="_id" [class.disabledLabel]="inputCustom.disabled">
+			{{inputCustom.label}}
+		</label>
+		<app-icon *ngIf="inputCustom.info" [icon]="'emojione-v1:circled-information-source'" [ngbTooltip]="inputCustom.info"></app-icon>
+	</div>
+
+	<input 
+		*ngIf="isTextField()" 
+		[id]="_id"
+		[type]="inputCustom.type" 
+		[formControl]="formControl" 
+		min="0"
+		class="form-control"
+		[ngClass]="{validateError: isErrorValidate ,paddingIcon: isPassword || inputCustom.icon}"
+		[class.disabled]="inputCustom.disabled"
+		[placeholder]="inputCustom.placeholder || inputCustom.label"
+		[mask]="inputCustom.mask"
+		(ngModelChange)="onChangeValueInput($event)"	
+	>
+
+	<input 
+		*ngIf="inputCustom.type == InputType.money" 
+		[id]="_id"
+		currencyMask 
+		[formControl]="formControl"
+		[options]="customCurrencyMaskConfig" 
+		[ngClass]="{validateError: isErrorValidate, disabled: inputCustom.disabled}"
+		class="form-control"
+		[class.disabled]="inputCustom.disabled"
+		(ngModelChange)="onChangeValueInput($event)"	
+	>
+	
+	<input 
+		*ngIf="inputCustom.type == InputType.checkbox"
+		[id]="_id" 
+		class="checkbox_animated" 
+		type="checkbox"
+		[formControl]="formControl"
+		[class.disabled]="inputCustom.disabled"
+		(ngModelChange)="onChangeValueInput($event)"	
+	>
+
+	<textarea 
+  	*ngIf="inputCustom.type == InputType.textArea" 
+		[id]="_id"
+		class="form-control"
+		[formControl]="formControl" 
+		[rows]="inputCustom.rows || 2" 
+		[placeholder]="inputCustom.placeholder || inputCustom.label"
+		[ngClass]="{validateError: isErrorValidate, disabled: inputCustom.disabled}"
+		[class.disabled]="inputCustom.disabled"
+		(ngModelChange)="onChangeValueInput($event)"	
+	></textarea>
+
+	<select 
+		*ngIf="inputCustom.type == InputType.select" 
+		[id]="_id"
+		class="form-control" 
+		[formControl]="formControl" 
+		[ngClass]="{validateError: isErrorValidate, disabled: _disableAfterSelecting || inputCustom.disabled}"
+		(change)="onChangeSelect($event.target['value'])"
+	>
+		<option value="" [attr.disabled]="true">
+			{{inputCustom.placeholder || 'Selecione uma opção'}}
+		</option>
+		<option *ngFor="let option of inputCustom.optionsSelect" [value]="getValueOptionSelect(option)">
+			{{getTextOptionSelect(option)}} 
+		</option>
+	</select>
+
+	<div *ngIf="isPassword" class="input-group-append" (click)="viewPassword()">
+		<span class="input-group-text">
+			<app-icon *ngIf="hidePassword" [icon]="'feather:eye'" [size]="13" _style="margin-bottom:-4px;"></app-icon>
+			<app-icon *ngIf="!hidePassword" [icon]="'feather:eye-off'" [size]="13" _style="margin-bottom:-4px;"></app-icon>
+		</span>
+	</div>
+
+	<div *ngIf="inputCustom.icon" class="input-group-append">
+		<span class="input-group-text">
+			<app-icon	[icon]="inputCustom.icon" [size]="13" _style="margin-bottom: -4px;"></app-icon>
+		</span>
+	</div>
+
+	<div *ngIf="isErrorValidate" class="msgError">
+		{{getErrorMessage()}}
+	</div>
+
+</div>

@@ -1,0 +1,13 @@
+<app-card title="Login" subtitle="Informe suas credenciais">
+	<div class="login">
+		<app-form
+			[formGroup]="formLogin"
+			[submit]="login"
+			[inputs]="inputsLogin"
+		>
+			<button actions class="btn btn-primary my-3 w-100">
+				Login 
+			</button>
+		</app-form>
+	</div>
+</app-card>
