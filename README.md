@@ -7,7 +7,7 @@ CRUD completo de um sistema simples de cadastro de produtos.
 https://github.com/CabralPro/ECOMMERCE-FRWK_DOTNET-CORE
 
 
-![alt text](https://github.com/CabralPro/ECOMMERCE-FRWK_ANGULAR/blob/main/demo_images/Cadastrar%20produto.png?raw=true)
+![alt text](https://github.com/CabralPro/ECOMMERCE-FRWK_ANGULAR/blob/main/demo_images/Vitrine.png?raw=true)
 
 
 
@@ -22,4 +22,9 @@ https://github.com/CabralPro/ECOMMERCE-FRWK_DOTNET-CORE
 
 
 
-![alt text](https://github.com/CabralPro/ECOMMERCE-FRWK_ANGULAR/blob/main/demo_images/Vitrine.png?raw=true)
+![alt text](https://github.com/CabralPro/ECOMMERCE-FRWK_ANGULAR/blob/main/demo_images/Login.png?raw=true)
+
+
+
+
+![alt text](https://github.com/CabralPro/ECOMMERCE-FRWK_ANGULAR/blob/main/demo_images/Cadastrar%20produto.png?raw=true)
