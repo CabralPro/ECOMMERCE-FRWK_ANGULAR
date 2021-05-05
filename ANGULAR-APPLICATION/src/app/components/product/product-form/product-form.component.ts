@@ -47,9 +47,6 @@ export class ProductFormComponent implements OnInit {
 			{ label: 'Descrição', controlName: 'descricao', control: new FormControl('', [Validators.required]) },
 			{ label: 'Imagem (URL)', controlName: 'imagem', control: new FormControl('', [Validators.required]) },
 			{ label: 'Estoque', controlName: 'quantidadeEstoque', control: new FormControl('', [Validators.required]), type: InputType.number },
-			{ label: 'Altura (Centimetros)', controlName: 'altura', control: new FormControl('', [Validators.required]), type: InputType.number },
-			{ label: 'Largura (Centimetros)', controlName: 'largura', control: new FormControl('', [Validators.required]), type: InputType.number },
-			{ label: 'Profundidade (Centimetros)', controlName: 'profundidade', control: new FormControl('', [Validators.required]), type: InputType.number },
 			{ label: 'Preço', controlName: 'valor', control: new FormControl('', [Validators.required]), type: InputType.money },
 		]
 		this.inputs.forEach(e => e.disabled = this.readonly)
